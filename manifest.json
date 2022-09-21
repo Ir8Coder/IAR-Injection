@@ -6,7 +6,7 @@
    },
    "content_scripts": [ {
       "js": [ "js/content.js" ],
-      "matches": [ "*://www.iamresponding.com/*" ]
+      "matches": [ "*://*.iamresponding.com/*" ]
    } ],
    "description": "Useful for Fire Departments that have IAR screens.  This script will automatically login the user that is set in the options.",
    "icons": {

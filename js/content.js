@@ -4,17 +4,18 @@ chrome.runtime.sendMessage({function: "getDefaults"}, function(response) {
 	var username = response.username;
 	var password = response.password;
 
-	if (window.location.href.toLowerCase().match("/v3/pages/memberlogin.aspx")) {
+	if (window.location.href.toLowerCase().match("/login/member")) {
 		
-		var agencyBox = document.querySelector('#ddlsubsciribers');
-		var userBox = document.querySelector('#memberfname');
-		var passBox = document.querySelector('#memberpwd');
+		var agencyBox = document.querySelector('#Input_Agency');
+		var userBox = document.querySelector('#Input_Username');
+		var passBox = document.querySelector('#Input_Password');
+
 
 		agencyBox.value = agency;
 		userBox.value = username;
 		passBox.value = password;
 
-		document.querySelector("#login").click();
+		document.querySelector("[name='Input.button']").click();
 
 	}
 	else if(window.location.href.toLowerCase().match('https://www.iamresponding.com/'))
