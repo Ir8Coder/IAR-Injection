@@ -22,7 +22,6 @@ chrome.runtime.sendMessage({function: "getDefaults"}, function(response) {
 	{
 		if (document.getElementsByClassName("CookieConsent").length >= 1)
 		{
-			console.log(document.getElementsByClassName("CookieConsent"));
 			document.getElementsByClassName("CookieConsent")[0].getElementsByTagName('div')[1].getElementsByTagName('button')[0].click();
 		}
 
